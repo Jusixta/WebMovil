@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web con Diseño Único</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Fondo dinámico con degradado y animación */
+        body {
+            background: linear-gradient(135deg, #1f4037 0%, #99f2c8 100%);
+            min-height: 100vh;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        /* Animación suave del fondo */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .navbar, footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-brand, .nav-link, footer p {
+            color: #ffffff !important;
+        }
+
+        .nav-link:hover {
+            color: #00ffba !important;
+        }
+
+        /* Tarjetas con sombras y animación al hover */
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-header {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 15px 15px 0 0;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #00ffba, #007bff);
+            border: none;
+            transition: background 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #007bff, #00ffba);
+        }
+
+        .carousel-item img {
+            filter: brightness(0.9);
+            border-radius: 15px;
+        }
+
+        /* Efectos sutiles en el progreso */
+        .progress-bar {
+            background: linear-gradient(45deg, #00ffba, #007bff);
+        }
+
+        .pagination .page-link {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: none;
+        }
+
+        .pagination .page-link:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilo del footer */
+        footer {
+            backdrop-filter: blur(8px);
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        h1, h2, .card-title {
+            font-weight: 700;
+            text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Enlaces estilizados */
+        a {
+            text-decoration: none;
+            color: #00ffba;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mi Sitio Web Único</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Bienvenido a Mi Sitio Web Único</h1>
+        
+        <div class="row">
+            <div class="col-md-8">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/api/placeholder/800/400" class="d-block w-100" alt="Slide 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/api/placeholder/800/400" class="d-block w-100" alt="Slide 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/api/placeholder/800/400" class="d-block w-100" alt="Slide 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header text-white">
+                        Noticias
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Noticia 1</li>
+                        <li class="list-group-item">Noticia 2</li>
+                        <li class="list-group-item">Noticia 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/api/placeholder/400/200" class="card-img-top" alt="Servicio 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Servicio 1</h5>
+                        <p class="card-text">Descripción del servicio 1.</p>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/api/placeholder/400/200" class="card-img-top" alt="Servicio 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Servicio 2</h5>
+                        <p class="card-text">Descripción del servicio 2.</p>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/api/placeholder/400/200" class="card-img-top" alt="Servicio 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Servicio 3</h5>
+                        <p class="card-text">Descripción del servicio 3.</p>
+                        <a href="#" class="btn btn-primary">Más información</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h2>Acerca de Nosotros</h2>
+                <p>Somos una empresa dedicada a ofrecer soluciones web de calidad. Nuestro equipo de expertos trabaja para satisfacer las necesidades de nuestros clientes.</p>
+                <div class="progress mt-3">
+                    <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Satisfacción del Cliente 75%</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>Contáctanos</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Siguiente</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-5 text-center">
+        <p>&copy; 2024 Mi Sitio Web Único. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
